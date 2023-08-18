@@ -13,13 +13,23 @@ body {
     /* display: flex; */
     /* align-items: center;
     justify-content: center; */
+    
 }
 
-nav{
+/* nav {
     display: flex;
-}
-
+} */
 /* Logo Image */
+ nav {
+    width: 100%;
+    height: 10%;
+    margin: auto;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+/* Ninja Logo Parent Class  */
 nav .user {
     position: relative;
     width: 30px;
@@ -28,7 +38,7 @@ nav .user {
     cursor: pointer;
     
 }
-
+/* Ninja Logo */
 nav .user img {
     position: absolute;
     width: 70px;
@@ -36,16 +46,17 @@ nav .user img {
     margin-right: 10px;
     border-radius: 50%;
     box-shadow: 2px 2px 8px #131312;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
-/* Favourites */
+/* Favourites Parent Class */
 
 nav ul {
     display: flex;
     margin-left: 80px;
 }
 
+/* Favourites */
 nav ul li {
     position: relative;
     list-style-type: none;
@@ -66,17 +77,20 @@ nav ul li:hover {
     margin-top: 15px;
 }
 
-/* Search */
+/* Search Bar */
 nav .search {
     position: relative;
-    width: 30%;
+    width: auto;
     padding: 1px 10px;
     border-radius: 20px;
     color: grey;
-    margin-left: 520px;
+    display: flex;
+    margin-left: 180%;
+    align-items: center;
+    justify-content: center;
 }
 
-nav .search::before {
+ nav .search::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -85,31 +99,205 @@ nav .search::before {
     background: rgb(184, 184, 184, .1);
     backdrop-filter: blur(5px);
     z-index: -1;
+    padding: 10px 10px;
 }
 
+/* Search Icon */
 nav .search .fa-magnifying-glass {
     font-size: 13px;
-    padding: 3px 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
+    padding-left: 0px;
 }
 
-nav .search input {
+/* Search Text */
+ nav .search input {
     background: none;
     outline: none;
     border: none;
-    padding: 0px 10px;
+    padding: 0px 30px;
     color: #fff;
     font-size: 12px;
+    width: 250px;
 }
 
+/* Notification + Search + Profile Pic Parent */
 .search_notify_profile{
     margin-top: 15px;
     display: flex;
-}
+     align-items: center; 
+} 
 
 /* Notification */
 .fa-bell
 {
     color: #fff;
-    margin-left: 820px;
-    margin-top: -40px;
+    margin-left: 30%;
+    /* margin-top: 5px; */
 }
+
+/* Song Photo Image Carosuel */
+.content {
+    margin: 0;
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #f0f0f0; */
+  }
+
+  div .carousel-container{
+    position: relative;
+    /* bottom: 80px;
+    right: 70px; */
+    margin-top: 40px;
+    margin-left: 250px;
+  }
+  
+  .carousel-container {
+    width: 600px;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+  }
+  
+  .carousel-slide {
+    flex: 0 0 600px;
+    
+    
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .content .resize-img{
+     /* width: 274px;  */
+    height: 365px;
+    display: inline-block;
+  }
+  
+  /* div .carousel-slide img{
+    position: relative;
+  } */
+
+  
+  
+  /* Animation */
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    14.28% {
+      transform: translateX(-100%);
+    }
+    28.56% {
+      transform: translateX(-200%);
+    }
+    42.84% {
+        transform: translateX(-300%);
+    }
+    57.12% {
+        transform: translateX(-400%);
+    }
+    71.4% {
+        transform: translateX(-500%);
+    }
+    85.68% {
+        transform: translateX(-600%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .carousel {
+    animation: slide 5s infinite;
+  }
+
+  /* Latest Release */
+
+
+  .first_two_photos{
+    display: flex;
+  }
+
+  .latest_release h3{
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 250px;
+  }
+
+  .latest_release p{
+    color: #fff;
+  }
+
+  .icon1{
+    color: #fff;
+    /* margin-top: 15px;
+    margin-left: 100px;
+    margin-bottom: 50px; */
+    position: relative;
+    left: 100px;
+    bottom: 11px;
+  }
+
+  header .content .latest_release .first_two_photos .first_release_photo h5{
+    font-size: 10px ;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  header .content .latest_release .first_two_photos .first_release_photo h5 div .release_date{
+    font-size: 9px;
+    color: #4c5262;
+  }
+
+  .release_image img{
+    display:inline-block;
+    height: 100px;
+    width: 100px;
+    
+  }
+
+  .first_release_photo{
+    margin-left: 250px;
+    margin-top: 20px;
+    display: flex;
+  }
+
+  
+
+  .release_dur p{
+    /* margin-left: 10px;
+    margin-bottom: 10px; */
+    position: relative;
+    left: 96px;
+    bottom: 18px;
+    font-size: 11px;
+  }
+
+  .second_release_photo{
+    margin-left: 250px;
+    margin-top: 20px;
+    display: flex;
+  }
+
+  header .content .latest_release .first_two_photos .second_release_photo h5{
+    font-size: 10px ;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .second_release_photo{
+    position: relative;
+    right: 120px;
+  }
